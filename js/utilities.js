@@ -27,7 +27,7 @@ function getTextVal(id)
     return amntVal;
 }
 
-function donateMoney(event, id, inputAmnt){
+function donateMoney(event, id, inputAmnt, Head){
     const donAmnt = getTextVal(id);
     console.log("Donate",donAmnt);
     const mainAmnt = getTextVal("main-amount");
@@ -35,6 +35,17 @@ function donateMoney(event, id, inputAmnt){
     {
         document.getElementById("main-amount").innerText = mainAmnt - inputAmnt;
         document.getElementById(id).innerText = donAmnt + inputAmnt;
+        const heading = document.getElementById(Head).innerText;
+        console.log("Heading",heading);
+        const currentDate = new Date();
+        const div = document.createElement('div');
+        div.innerHTML = `
+            <div class="p-4 border border-black m-5 rounded-xl">
+                <p class="mb-2">${inputAmnt} Taka is Donated for ${heading}.</p>
+                <p> Date: ${currentDate}</p>
+            </div>
+        `
+        document.getElementById('history').appendChild(div);
 
     }
     else
@@ -51,7 +62,7 @@ document.getElementById("noakhali-btn").addEventListener('click', function(event
     const amount = getInputVal(event,"flood-nk");
     if(amount!=-1)
     {
-        donateMoney(event,"nkh-amount",amount);
+        donateMoney(event,"nkh-amount",amount,"nk-head");
     }
 
 })
@@ -61,7 +72,7 @@ document.getElementById("feni-btn").addEventListener('click', function(event){
     const amount = getInputVal(event,"flood-feni");
     if(amount!=-1)
         {
-            donateMoney(event,"feni-amount",amount);
+            donateMoney(event,"feni-amount",amount,"feni-head");
         }
 })
 
@@ -69,12 +80,29 @@ document.getElementById("quota-btn").addEventListener('click', function(event){
     const amount = getInputVal(event,"quota-all");
     if(amount!=-1)
         {
-            donateMoney(event,"quota-amount",amount);
+            donateMoney(event,"quota-amount",amount,"quota-head");
         }
 })
 
 
-document.getElementById("blog-id").addEventListener("click",function(){
-    window.location.href="./faq.html";
+document.getElementById("hist-btn").addEventListener('click', function(event){
+    document.getElementById("donation-btn").classList.remove("bg-[#B4F461]")
+    document.getElementById("donation-btn").classList.add("bg-white")
+    document.getElementById("hist-btn").classList.remove("bg-white")
+    document.getElementById("hist-btn").classList.add("bg-[#B4F461]")
+    document.getElementById("content-card").classList.add("hidden")
+    document.getElementById("history").classList.add("hidden")
+    document.getElementById("history").classList.remove("hidden")
 })
+
+document.getElementById("donation-btn").addEventListener('click', function(event){
+    document.getElementById("hist-btn").classList.remove("bg-[#B4F461]")
+    document.getElementById("hist-btn").classList.add("bg-white")
+    document.getElementById("donation-btn").classList.remove("bg-white")
+    document.getElementById("donation-btn").classList.add("bg-[#B4F461]")
+    document.getElementById("content-card").classList.add("hidden")
+    document.getElementById("history").classList.add("hidden")
+    document.getElementById("content-card").classList.remove("hidden")
+})
+
 
