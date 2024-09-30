@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            fontFamily: {
+              lex: ["Lexend", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-lex">
+    <header>
+      <div class="header-content">
+        <div class="navigation flex justify-evenly">
+          <div class="nav-cont flex justify-center items-center">
+            <div class="">
+              <button id="home-id" class="blog-btn btn bg-[#B4F461]">
+                Home
+              </button>
+            </div>
+          </div>
+          <div class="nav-cont flex justify-center items-center">
+            <div><img src="./assets/logo.png" alt="" /></div>
+            <div>Donate Bangladesh</div>
+          </div>
+          <div class="nav-cont flex justify-center items-center">
+            <div><img src="./assets/coin.png" alt="" /></div>
+            <div id="main-amount">5500 BDT</div>
+          </div>
+        </div>
+      </div>
+      <script src="./js/faq.js"></script>
+    </header>
+
+    <main>
+      <div class="w-9/12 mx-auto mt-20">
+        <div class="text-4xl font-extrabold my-10">Important FAQ Questions</div>
+        <div class="join join-vertical w-full">
+          <div
+            class="collapse collapse-arrow join-item border-base-300 border border-black py-3"
+          >
+            <input type="radio" name="my-accordion-4" checked="checked" />
+            <div class="collapse-title text-xl font-medium border">
+              How can I donate to support flood victims?
+            </div>
+            <div class="collapse-content">
+              <p>
+                You can donate online via our secure payment gateway on the
+                donations page.
+              </p>
+            </div>
+          </div>
+          <div
+            class="collapse collapse-arrow join-item border-base-300 border border-black py-3"
+          >
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              Is my donation tax-deductible?
+            </div>
+            <div class="collapse-content">
+              <p>
+                Yes, all donations are tax-deductible, and you'll receive a
+                receipt for tax purposes.
+              </p>
+            </div>
+          </div>
+          <div
+            class="collapse collapse-arrow join-item border-base-300 border border-black py-3"
+          >
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              Can I choose to donate specifically to the Quota Movement cause?
+            </div>
+            <div class="collapse-content">
+              <p>
+                Yes, you can specify your preferred cause during the donation
+                process.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="collapse collapse-arrow join-item border-base-300 border border-black py-3"
+          >
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              What percentage of my donation goes directly to relief efforts?
+            </div>
+            <div class="collapse-content">
+              <p>
+                100% of your donation will be allocated to flood relief and
+                Quota Movement initiatives.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="collapse collapse-arrow join-item border-base-300 border border-black py-3"
+          >
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              Can I donate goods instead of money?
+            </div>
+            <div class="collapse-content">
+              <p>
+                Yes, we accept non-monetary donations such as food, clothes, and
+                medical supplies—details are available on our support page.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- The button to open modal -->
+    <a href="#my_modal_8" class="btn">open modal</a>
+
+    <!-- Put this part before </body> tag -->
+    <div class="modal" role="dialog" id="my_modal_8">
+      <div class="modal-box">
+        <div>
+          <h3 class="text-3xl font-bold text-center mb-5">Congrates!</h3>
+          <div class="border flex justify-center">
+            <img
+              src="./assets/coin.png"
+              alt=""
+              class="items-center border border-black"
+            />
+          </div>
+          <p class="py-4 text-center">You Have Donated for Humankind</p>
+          <p class="py-2 text-xl font-extrabold text-center">Successfully</p>
+        </div>
+        <div class="modal-action flex justify-center">
+          <a href="#" class="btn border border-blue-500 bg-gray-400"
+            >close confirmation</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Button to open the modal -->
+<button id="openModalBtn" class="btn bg-blue-500 text-white px-4 py-2 rounded">Open Modal</button>
+
+<!-- Modal structure -->
+<div id="my_modal_8" class="modal fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+  <div class="modal-box bg-white p-8 rounded shadow-lg">
+    <div>
+      <h3 class="text-3xl font-bold text-center mb-5">Congrats!</h3>
+      <div class="border flex justify-center">
+        <img
+          src="./assets/coin.png"
+          alt="Coin"
+          class="items-center border border-black"
+        />
+      </div>
+      <p class="py-4 text-center">You Have Donated for Humankind</p>
+      <p class="py-2 text-xl font-extrabold text-center">Successfully</p>
+    </div>
+    <div class="modal-action flex justify-center mt-4">
+      <button id="closeModalBtn" class="btn bg-gray-400 text-white px-4 py-2 rounded">Close Confirmation</button>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript for modal control -->
+<script>
+  // Get the modal element
+  const modal = document.getElementById('my_modal_8');
+  const openModalBtn = document.getElementById('openModalBtn');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+
+  // Function to open the modal
+  openModalBtn.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+  });
+
+  // Function to close the modal
+  closeModalBtn.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+
+  // Close the modal if clicking outside the modal box
+  window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.classList.add('hidden');
+    }
+  });
+</script>
+
+  </body>
+</html>
