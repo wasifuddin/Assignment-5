@@ -1,8 +1,9 @@
 
 function getInputVal(event,id){
     const val = document.getElementById(id).value;
-    console.log(val)
+    console.log(val);
     console.log("Input Value", val);
+    document.getElementById(id).value = "";
 
     const numVal = parseFloat(val);
     console.log("NumVal: ",numVal)
@@ -41,7 +42,7 @@ function donateMoney(event, id, inputAmnt, Head){
         const div = document.createElement('div');
         div.innerHTML = `
             <div class="p-4 border border-black m-5 rounded-xl">
-                <p class="mb-2">${inputAmnt} Taka is Donated for ${heading}.</p>
+                <p class="mb-2 font-extrabold">${inputAmnt} Taka is Donated for ${heading}.</p>
                 <p> Date: ${currentDate}</p>
             </div>
         `
@@ -106,3 +107,6 @@ document.getElementById("donation-btn").addEventListener('click', function(event
 })
 
 
+document.getElementById("blog-id").addEventListener("click",function(){
+    window.location.href="./faq.html";
+})

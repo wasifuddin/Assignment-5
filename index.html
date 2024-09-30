@@ -32,8 +32,8 @@
     </script>
   </head>
   <body class="font-lex">
-    <header class="sticky top-0 bg-yellow-100 py-3">
-      <div class="header-content">
+    <header class="sticky top-0">
+      <div class="header-content bg-yellow-200 py-3 opacity-80">
         <div class="navigation flex justify-evenly">
           <div class="nav-cont flex justify-center items-center">
             <div class="">
@@ -44,25 +44,31 @@
           </div>
           <div class="nav-cont flex justify-center items-center">
             <div><img src="./assets/logo.png" alt="" /></div>
-            <div>Donate Bangladesh</div>
+            <div class="font-extrabold">Donate Bangladesh</div>
           </div>
           <div class="nav-cont flex justify-center items-center">
             <div><img src="./assets/coin.png" alt="" /></div>
-            <div id="main-amount">5500 BDT</div>
+            <div id="main-amount">10500 BDT</div>
+          </div>
+        </div>
+      </div>
+      <div class="button-tab bg-gray-300 opacity-80">
+        <div
+          class="btn-options w-4/5 mx-auto flex justify-center items-center py-2 space-x-8"
+        >
+          <div id="donation-btn" class="btn bg-[#B4F461] border-black">
+            Donation
+          </div>
+          <div id="hist-btn" class="btn bg-white border border-black px-6">
+            History
           </div>
         </div>
       </div>
     </header>
     <main>
-      <div
-        class="btn-options w-3/5 mx-auto flex justify-center items-center mt-10"
-      >
-        <div id="donation-btn" class="btn bg-[#B4F461] border-black">Donation</div>
-        <div id="hist-btn" class="btn bg-white border border-black">History</div>
-      </div>
       <div id="content-card" class="card-contents">
         <!-- Card 1 -->
-        <div class="cards-section w-3/5 mx-auto">
+        <div class="cards-section w-4/5 mx-auto">
           <div class="card-1 grid grid-cols-2 mt-14">
             <div class="card-img border-2">
               <img src="./assets/noakhali.png" alt="" class="" />
@@ -70,7 +76,7 @@
             <div class="card-content">
               <div>
                 <div class="flex">
-                  <div class="flex bg-[#d1d5db]">
+                  <div class="flex bg-[#d1d5db] p-2 rounded-xl justify-center items-center">
                     <img src="./assets/coin.png" alt="" />
                     <div id="nkh-amount">600 BDT</div>
                   </div>
@@ -114,7 +120,7 @@
             <div class="card-content">
               <div>
                 <div class="flex">
-                  <div class="flex bg-[#d1d5db]">
+                  <div class="flex bg-[#d1d5db] p-2 rounded-xl justify-center items-center">
                     <img src="./assets/coin.png" alt="" />
                     <div id="feni-amount">600 BDT</div>
                   </div>
@@ -161,7 +167,7 @@
             <div class="card-content">
               <div>
                 <div class="flex">
-                  <div class="flex bg-[#d1d5db]">
+                  <div class="flex bg-[#d1d5db] p-2 rounded-xl justify-center items-center">
                     <img src="./assets/coin.png" alt="" />
                     <div id="quota-amount">600 BDT</div>
                   </div>
