@@ -35,7 +35,7 @@ function donateMoney(event, id, inputAmnt, Head){
     if(inputAmnt<= mainAmnt)
     {
         document.getElementById("main-amount").innerText = mainAmnt - inputAmnt;
-        document.getElementById(id).innerText = donAmnt + inputAmnt;
+        document.getElementById(id).innerText = (donAmnt + inputAmnt) + " BDT";
         const heading = document.getElementById(Head).innerText;
         console.log("Heading",heading);
         const currentDate = new Date();
