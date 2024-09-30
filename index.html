@@ -33,18 +33,21 @@
   </head>
   <body class="font-lex">
     <header class="sticky top-0">
-      <div class="header-content bg-yellow-200 py-3 opacity-80">
+      <div class="header-content bg-yellow-200 py-3">
         <div class="navigation flex justify-evenly">
           <div class="nav-cont flex justify-center items-center">
             <div class="">
-              <button id="blog-id" class="blog-btn btn bg-[#B4F461]">
+              <button
+                id="blog-id"
+                class="blog-btn btn bg-[#B4F461] font-extrabold border border-black px-10"
+              >
                 Blog
               </button>
             </div>
           </div>
-          <div class="nav-cont flex justify-center items-center">
+          <div class="nav-cont flex justify-center items-center space-x-4">
             <div><img src="./assets/logo.png" alt="" /></div>
-            <div class="font-extrabold">Donate Bangladesh</div>
+            <div class="font-extrabold hidden lg:block">Donate Bangladesh</div>
           </div>
           <div class="nav-cont flex justify-center items-center">
             <div><img src="./assets/coin.png" alt="" /></div>
@@ -52,14 +55,20 @@
           </div>
         </div>
       </div>
-      <div class="button-tab bg-gray-300 opacity-80">
+      <div class="button-tab bg-gray-300 opacity-80 py-2">
         <div
-          class="btn-options w-4/5 mx-auto flex justify-center items-center py-2 space-x-8"
+          class="btn-options lg:w-4/5 mx-auto flex justify-center items-center py-2 space-x-8"
         >
-          <div id="donation-btn" class="btn bg-[#B4F461] border-black">
+          <div
+            id="donation-btn"
+            class="btn bg-[#B4F461] border-black font-extrabold"
+          >
             Donation
           </div>
-          <div id="hist-btn" class="btn bg-white border border-black px-6">
+          <div
+            id="hist-btn"
+            class="btn bg-white border border-black px-6 font-extrabold"
+          >
             History
           </div>
         </div>
@@ -68,24 +77,26 @@
     <main>
       <div id="content-card" class="card-contents">
         <!-- Card 1 -->
-        <div class="cards-section w-4/5 mx-auto">
-          <div class="card-1 grid grid-cols-2 mt-14">
+        <div class="cards-section w-11/12 lg:w-4/5 mx-auto">
+          <div class="card-1 grid lg:grid-cols-2 mt-14">
             <div class="card-img border-2">
-              <img src="./assets/noakhali.png" alt="" class="" />
+              <img src="./assets/noakhali.png" alt="" class="py-4" />
             </div>
             <div class="card-content">
-              <div>
+              <div class="">
                 <div class="flex">
-                  <div class="flex bg-[#d1d5db] p-2 rounded-xl justify-center items-center">
+                  <div
+                    class="flex bg-[#d1d5db] py-2 rounded-xl justify-center items-center"
+                  >
                     <img src="./assets/coin.png" alt="" />
-                    <div id="nkh-amount">600 BDT</div>
+                    <div id="nkh-amount">9400 BDT</div>
                   </div>
                 </div>
 
                 <h1 id="nk-head" class="text-xl font-extrabold">
                   Donate for Fload at Noakhali, Bangladesh
                 </h1>
-                <p class="text-base">
+                <p class="text-base border border-black">
                   The recent floods in Noakhali have caused significant damage
                   to homes infrastructure. Your donation will help provide
                   essential supplies and to those affected by this disaster.
@@ -97,15 +108,15 @@
                   type="text"
                   name="Donation"
                   id="flood-nk"
-                  placeholder="Write Donation Amount"
-                  class="w-full border border-black p-2"
+                  placeholder=" Write Donation Amount"
+                  class="w-full mx-auto border border-black py-2 my-4 rounded-xl"
                 />
-                <div class="w-full">
+                <div class="flex lg:w-full">
                   <!-- <button data-modal-toggle="modal-view" id="noakhali-btn" class="btn bg-[#B4F461] w-full">Donate Now</button> -->
                   <a
                     href="#modal-view"
                     id="noakhali-btn"
-                    class="btn bg-[#B4F461] w-full"
+                    class="btn bg-[#B4F461] w-full rounded-xl"
                     >Donate Now</a
                   >
                 </div>
@@ -113,16 +124,18 @@
             </div>
           </div>
           <!-- Card 2 -->
-          <div class="card-1 grid grid-cols-2 mt-14">
+          <div class="card-1 grid lg:grid-cols-2 mt-14">
             <div class="card-img border-2">
-              <img src="./assets/feni.png" alt="" class="" />
+              <img src="./assets/feni.png" alt="" class="py-2" />
             </div>
             <div class="card-content">
               <div>
                 <div class="flex">
-                  <div class="flex bg-[#d1d5db] p-2 rounded-xl justify-center items-center">
+                  <div
+                    class="flex bg-[#d1d5db] p-2 rounded-xl justify-center items-center"
+                  >
                     <img src="./assets/coin.png" alt="" />
-                    <div id="feni-amount">600 BDT</div>
+                    <div id="feni-amount">6500 BDT</div>
                   </div>
                 </div>
 
@@ -144,14 +157,13 @@
                   name="Donation"
                   id="flood-feni"
                   placeholder="Write Donation Amount"
-                  class="w-full border border-black p-2"
+                  class="w-full border border-black p-2 my-4 rounded-xl"
                 />
                 <div class="w-full">
-                  <!-- <button id="feni-btn" class="btn bg-[#B4F461] w-full">Donate Now</button> -->
                   <a
                     href="#modal-view"
                     id="feni-btn"
-                    class="btn bg-[#B4F461] w-full"
+                    class="btn bg-[#B4F461] w-full rounded-xl"
                     >Donate Now</a
                   >
                 </div>
@@ -160,16 +172,18 @@
           </div>
 
           <!-- Card 3 -->
-          <div class="card-1 grid grid-cols-2 mt-14">
+          <div class="card-1 grid lg:grid-cols-2 my-14">
             <div class="card-img border-2">
-              <img src="./assets/quota-protest.png" alt="" class="" />
+              <img src="./assets/quota-protest.png" alt="" class="py-2" />
             </div>
             <div class="card-content">
               <div>
                 <div class="flex">
-                  <div class="flex bg-[#d1d5db] p-2 rounded-xl justify-center items-center">
+                  <div
+                    class="flex bg-[#d1d5db] p-2 rounded-xl justify-center items-center"
+                  >
                     <img src="./assets/coin.png" alt="" />
-                    <div id="quota-amount">600 BDT</div>
+                    <div id="quota-amount">10050 BDT</div>
                   </div>
                 </div>
 
@@ -192,14 +206,14 @@
                   name="Donation"
                   id="quota-all"
                   placeholder="Write Donation Amount"
-                  class="w-full border border-black p-2"
+                  class="w-full border border-black p-2 my-4 rounded-xl"
                 />
                 <div class="w-full">
                   <!-- <button id="quota-btn" class="btn bg-[#B4F461] w-full">Donate Now</button> -->
                   <a
                     href="#modal-view"
                     id="quota-btn"
-                    class="btn bg-[#B4F461] w-full"
+                    class="btn bg-[#B4F461] w-full rounded-xl"
                     >Donate Now</a
                   >
                 </div>
